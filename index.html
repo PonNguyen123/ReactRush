@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ReactRush – Reaction Time Challenge</title>
+
+  <meta
+    name="description"
+    content="Test your reaction speed in a simple micro game. Wait for green, then tap as fast as you can."
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">React<span>Rush</span></div>
+    <nav class="nav">
+      <a href="#hero">Home</a>
+      <a href="#game">Game</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <h1>How Fast Can You React?</h1>
+        <p>
+          Tap when the screen flashes green. Track your best time and see how
+          your reactions compare over multiple rounds.
+        </p>
+        <button class="primary-btn" id="scrollToGameBtn">
+          Play Now
+        </button>
+      </div>
+    </section>
+
+    <!-- Game Section -->
+    <section id="game" class="game-section">
+      <div class="game-header">
+        <h2>Reaction Time Challenge</h2>
+        <p>
+          When you’re ready, press <strong>Start</strong>. Wait until the
+          panel turns green, then tap as quickly as you can.
+        </p>
+      </div>
+
+      <div class="game-layout">
+        <!-- Game panel -->
+        <div id="gamePanel" class="game-panel">
+          <p id="panelMessage" class="panel-message">
+            Press Start to begin
+          </p>
+        </div>
+
+        <!-- Controls + Stats -->
+        <div class="game-sidebar">
+          <button class="primary-btn" id="startBtn">
+            Start
+          </button>
+
+          <div class="stat-card">
+            <h3>Current Reaction</h3>
+            <p class="stat-value">
+              <span id="currentTime">—</span>
+              <span class="unit">ms</span>
+            </p>
+          </div>
+
+          <div class="stat-card">
+            <h3>Best Time</h3>
+            <p class="stat-value">
+              <span id="bestTime">—</span>
+              <span class="unit">ms</span>
+            </p>
+            <p class="stat-note" id="bestLabel">
+              No data yet. Play a round!
+            </p>
+          </div>
+
+          <div class="stat-card">
+            <h3>Recent Attempts</h3>
+            <ul id="historyList" class="history-list">
+              <!-- JS fills this -->
+            </ul>
+          </div>
+
+          <button class="secondary-btn small" id="resetBtn">
+            Reset Best & History
+          </button>
+
+          <p id="feedbackText" class="feedback-text">
+            Tips: Don’t click early or it will count as a false start.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About / Reflection -->
+    <section id="about" class="about">
+      <h2>About This Prototype</h2>
+      <p>
+        ReactRush is a micro-game built as a rapid ideation prototype to
+        explore interaction design, timing-based logic, and simple performance
+        feedback loops. It uses random delays, time measurement via
+        JavaScript, animation states, and local browser storage to track the
+        best reaction time and recent attempts.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 ReactRush · Rapid Ideation Prototype</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
